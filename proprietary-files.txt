@@ -936,3 +936,6 @@ vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/lib/libtinycompress.so
 vendor/lib64/libtinycompress.so
 
+# Camera Extensions
+system_ext/framework/camerax-vendor-extensions.jar
+

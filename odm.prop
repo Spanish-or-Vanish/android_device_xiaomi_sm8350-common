@@ -1,2 +1,5 @@
+# CameraX
+ro.camerax.extensions.enabled=true
+
 # Qcom
 ro.vendor.qti.va_odm.support=1

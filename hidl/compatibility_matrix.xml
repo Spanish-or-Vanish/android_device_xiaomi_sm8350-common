@@ -66,14 +66,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="false">
-        <name>android.system.wifi.keystore</name>
-        <version>1.0</version>
-        <interface>
-            <name>IKeystore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.sigma_miracast</name>
         <transport>hwbinder</transport>
@@ -81,12 +73,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>Isigma_miracast</name>
             <instance>sigmahal</instance>
+            <instance>sigmahal64</instance>
         </interface>
    </hal>
       <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.qccsyshal</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.0-2</version>
         <interface>
             <name>IQccsyshal</name>
             <instance>qccsyshal</instance>

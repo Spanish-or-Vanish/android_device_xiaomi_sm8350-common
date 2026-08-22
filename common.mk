@@ -190,8 +190,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # DeviceAsWebcam
+ifeq ($(TARGET_INCLUDES_Webcam),true)
 PRODUCT_PACKAGES += \
     DeviceAsWebcam
+
+PRODUCT_PACKAGES += \
+    DeviceAsWebcamOverlayCommon
+
+# Enable DeviceAsWebcam support
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.disable_video_encode_flag=true \
+    ro.usb.uvc.enabled=true
+endif
 
 # Display
 PRODUCT_PACKAGES += \
@@ -397,9 +407,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlaySM8350 \
     SystemUIOverlaySM8350 \
     WifiOverlaySM8350
-
-PRODUCT_PACKAGES += \
-    DeviceAsWebcamOverlayCommon
 
 # Partitions
 PRODUCT_PACKAGES += \

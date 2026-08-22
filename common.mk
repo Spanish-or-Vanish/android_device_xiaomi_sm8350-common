@@ -327,6 +327,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENABLE_UFFD_GC := true
 
 # Lineage Health
+ifeq ($(TARGET_INCLUDES_Lineage_Health),true)
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
@@ -334,6 +335,7 @@ $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/qcom-battery/input_suspend)
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
+endif
 $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/reverse_chg_mode)
 
 # Media

@@ -929,3 +929,10 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+
+# All unpinned blobs below are extracted from vili V816.0.22.0.UKDMIXM
+
+# Audio (Prebuilt)
+vendor/lib/libtinycompress.so
+vendor/lib64/libtinycompress.so
+

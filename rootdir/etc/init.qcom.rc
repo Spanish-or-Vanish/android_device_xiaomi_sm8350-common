@@ -77,6 +77,10 @@ on boot
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
 
+    mkdir /persist/drm 0770 system system
+    mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /persist/misc 0770 system system
+    mkdir /persist/alarm 0770 system system
     mkdir /mnt/vendor/persist/time 0770 system system
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/iar_db 0770 system system
@@ -96,11 +100,16 @@ on boot
     chown system system /sys/class/backlight/panel1-backlight/max_brightness
 
     # Create directory used for display
+    # for backward compatibility
+    mkdir /persist/display 0770 system graphics
     mkdir /mnt/vendor/persist/display 0770 system graphics
 
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
     copy /vendor/etc/tunings.txt /mnt/vendor/persist/vpp/tunings.txt
+
+    # Create hexlp directory
+    mkdir /mnt/vendor/persist/hexlp 0770 media media
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -157,15 +166,22 @@ on post-fs-data
     mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/vendor/wifi/wigig_hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
     mkdir /data/vendor/mac_addr 0770 system wifi
+
+    # Create the directories used by WiGig Sensing
+    mkdir /data/vendor/sensing 0770 system wifi
 
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
     chown radio radio /data/vendor/connectivity
 
     # Create directory used by audio subsystem
+    mkdir /data/vendor/audio 0770 audio audio
+    mkdir /data/vendor/audio_dsp 0770 media media
+    mkdir /data/vendor/audio/audio_collector 0770 audio audio
     mkdir /data/vendor/audio 0771 audio audio
 
     # Create directory for audio delta files
@@ -186,6 +202,8 @@ on post-fs-data
     mkdir /dev/socket/location 0770 gps gps
     mkdir /dev/socket/location/mq 0770 gps gps
     mkdir /dev/socket/location/xtra 0770 gps gps
+    mkdir /dev/socket/location/ehub 0770 gps gps
+    mkdir /dev/socket/location/dgnss 0770 gps gps
 
     # Create directories for wifihal services
     mkdir /dev/socket/wifihal 0770 wifi wifi
@@ -225,6 +243,9 @@ on post-fs-data
 
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
+
+    # Create hexlp directory
+    mkdir /data/vendor/hexlp 0770 media media
 
     setprop vold.post_fs_data_done 1
 

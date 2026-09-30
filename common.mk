@@ -47,12 +47,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     liba2dpoffload \
     libbatterylistener \
-    libexthwplugin \
     libhdmiedid \
     libhfp \
-    libsndmonitor \
-    libspkrprot \
-    libssrec
+    libsndmonitor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt

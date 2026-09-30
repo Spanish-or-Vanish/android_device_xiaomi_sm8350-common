@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
-    audio.primary.lahaina \
     audio.r_submix.default \
     audio.usb.default
 

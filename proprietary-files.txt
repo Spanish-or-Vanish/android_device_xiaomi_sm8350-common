@@ -391,12 +391,6 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so|14c8acc139d845411026f08c34925aa3535fa664
 vendor/lib/hw/vulkan.adreno.so|546277c80ad1a5021680f8379abc5e1df54c3785
 vendor/lib64/hw/vulkan.adreno.so|a425c0aa632264fb582b654413522ccee105afe9
 
-# HotwordEnrollment
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
-
 # IMS - from PA
 system_ext/priv-app/ims/ims.apk|26aba371a1a74d02b3610d450db37286
 
@@ -468,7 +462,6 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen
-vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
